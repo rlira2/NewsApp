@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Publicationdate:</strong>
+  <%= @announcement.publicationDate %>
+</p>
+
+<p>
+  <strong>Headline:</strong>
+  <%= @announcement.headline %>
+</p>
+
+<p>
+  <strong>Subhead:</strong>
+  <%= @announcement.subhead %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @announcement.body %>
+</p>
+
+<p>
+  <strong>Newslink:</strong>
+  <%= @announcement.newslink %>
+</p>
+
+<%= link_to 'Edit', edit_announcement_path(@announcement) %> |
+<%= link_to 'Back', announcements_path %>
