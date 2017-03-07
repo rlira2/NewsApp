@@ -1,0 +1,48 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3778040616589386000);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3778040616589386000)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/announcements" for 127.0.0.1 at 2017-03-07 04:24:13 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (5.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  Rendered announcements/index.html.erb within layouts/application (48.6ms)
+Completed 200 OK in 1616ms (Views: 1573.8ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-07 04:25:33 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  Rendered announcements/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 64ms (Views: 58.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-07 04:25:58 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  Rendered announcements/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 99ms (Views: 97.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-07 04:31:39 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (2.7ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  Rendered announcements/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 142ms (Views: 133.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-07 04:33:06 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements"[0m
+  Rendered announcements/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 98ms (Views: 96.4ms | ActiveRecord: 0.4ms)
+
+
