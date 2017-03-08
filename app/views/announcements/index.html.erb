@@ -1,32 +1,37 @@
 <p id="notice"><%= notice %></p>
-<h1>Announcements</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Publicationdate</th>
-      <th>Headline</th>
-      <th>Subhead</th>
-      <th>Body</th>
-      <th>Newslink</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @announcements.each do |announcement| %>
-      <tr>
-        <td><%= announcement.publicationDate %></td>
-        <td><%= announcement.headline %></td>
-        <td><%= announcement.subhead %></td>
-        <td><%= announcement.body %></td>
-        <td><%= announcement.newslink %></td>
-        <td><%= link_to 'Show', announcement %></td>
-        <td><%= link_to 'Edit', edit_announcement_path(announcement) %></td>
-        <td><%= link_to 'Destroy', announcement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="jumbotron">
+    <h1>The Newspaper</h1>
+    <p>A little page to read all the important news.</p>
+</div>
+<div>
+         <table class="table table-striped">
+           <thead>
+             <tr>
+               <th>Publicationdate</th>
+               <th>Headline</th>
+               <th>Subhead</th>
+               <th>Body</th>
+               <th colspan="3"></th>
+             </tr>
+           </thead>
+           <tbody>
+             <% @announcements.each do |announcement| %>
+               <tr>
+                 <td><%= announcement.publicationDate %></td>
+                 <td><%= announcement.headline %></td>
+                 <td><%= announcement.subhead %></td>
+                 <td><%= announcement.body %></td>      
+                 <td><%= link_to 'Show', announcement %></td>
+                 <td><%= link_to 'Edit', edit_announcement_path(announcement) %></td>
+                 <td><%= link_to 'Destroy', announcement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+               </tr>
+             <% end %>
+           </tbody>
+         </table>
+       </div>
+     </div>
+
 
 <br>
 
