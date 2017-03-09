@@ -7,9 +7,10 @@ class AnnouncementsController < ApplicationController
     @announcements = Announcement.all
   end
 
-  def index_admin
-    @announcements = Announcement.take(4)
+  def indexadmin
+    @mainannouncements = Announcement.take(10)
   end
+  helper_method :indexadmin
   # GET /announcements/1
   # GET /announcements/1.json
   def show

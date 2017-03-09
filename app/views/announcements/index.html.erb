@@ -17,10 +17,9 @@
          <table class="table table-striped">
            <thead>
              <tr>
-               <th><h3>Publication_date</h3></th>
+               <th><h3>Publication date</h3></th>
                <th><h3>Headline</h3></th>
                <th><h3>Subhead</h3></th>
-               <th><h3>Body</h3></th>
                <th colspan="3"></th>
              </tr>
            </thead>
@@ -30,7 +29,6 @@
                  <td><%= announcement.publicationDate %></td>
                  <td><%= announcement.headline %></td>
                  <td><%= announcement.subhead %></td>
-                 <td><%= announcement.body %></td>
                  <td><h2><span class="label label-info"><%= link_to 'Show', announcement %></span></h2></td>
                  <td><h2><span class="label label-info"><%= link_to 'Edit', edit_announcement_path(announcement) %></span></h2></td>
                  <td><h2><span class="label label-info"><%= link_to 'Destroy', announcement, method: :delete, data: { confirm: 'Are you sure?' } %></span></h2></td>
@@ -44,3 +42,5 @@
 <h1>
   <a href='/main_page' button type="button" class="btn btn-lg btn-success pull-right" > Back home</a>
 </h1>
+<br>
+<br>

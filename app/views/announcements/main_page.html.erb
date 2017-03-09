@@ -1,8 +1,22 @@
 <p id="notice"><%= notice %></p>
-
 <div class="jumbotron">
     <h1>The Newspaper</h1>
     <p>A little page to read all the important news.</p>
+    <a href='/index' button type="button" class="btn btn-lg btn-info pull-right" > admin</a>
 </div>
-
-<a href='/index' button type="button" class="btn btn-lg btn-info " > admin</a>
+<% indexadmin.each do |announcement| %>
+    <div class="panel panel-info">
+               <div class="panel-heading">
+                 <h3><%= announcement.headline %></h3>
+               </div>
+               <div class="panel-body">
+              <a href="<%= show_path(announcement.id) %>" class="list-group-item">
+              <h4 class="list-group-item-heading"><%= announcement.subhead %></h4>
+              <p class="list-group-item-text"><%= announcement.body[0,1000] %></p>
+            </a>
+               </div>
+               <div align="right"><%= announcement.publicationDate %></div>
+    </div>
+<% end %>
+           </tbody>
+         </table>
