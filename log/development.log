@@ -4348,3 +4348,19 @@ Processing by AnnouncementsController#index as HTML
 Completed 200 OK in 171ms (Views: 169.7ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-03-09 00:56:12 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 725ms (Views: 697.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:56:17 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (1.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 207ms (Views: 187.5ms | ActiveRecord: 10.9ms)
+
+
