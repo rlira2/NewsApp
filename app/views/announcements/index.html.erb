@@ -5,6 +5,12 @@
     <p>A little page to read all the important news.</p>
 </div>
 <div>
+  <h1>
+          <span class="label label-info"><%= link_to 'New Announcement', new_announcement_path %></span>
+  </h1>
+<br>
+<br>
+
          <table class="table table-striped">
            <thead>
              <tr>
@@ -21,7 +27,7 @@
                  <td><%= announcement.publicationDate %></td>
                  <td><%= announcement.headline %></td>
                  <td><%= announcement.subhead %></td>
-                 <td><%= announcement.body %></td>      
+                 <td><%= announcement.body %></td>
                  <td><%= link_to 'Show', announcement %></td>
                  <td><%= link_to 'Edit', edit_announcement_path(announcement) %></td>
                  <td><%= link_to 'Destroy', announcement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -31,8 +37,4 @@
          </table>
        </div>
      </div>
-
-
 <br>
-
-<%= link_to 'New Announcement', new_announcement_path %>

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   resources :announcements
-
-  root 'announcements#index'
+  get 'index' => 'announcements#index'
+  root 'announcements#main_page'
 end

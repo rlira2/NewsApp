@@ -7,10 +7,14 @@ class AnnouncementsController < ApplicationController
     @announcements = Announcement.all
   end
 
+  def index_admin
+    @announcements = Announcement.take(4)
+  end
   # GET /announcements/1
   # GET /announcements/1.json
   def show
   end
+
 
   # GET /announcements/new
   def new

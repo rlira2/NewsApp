@@ -2740,3 +2740,1544 @@ Processing by AnnouncementsController#index as HTML
 Completed 200 OK in 252ms (Views: 233.5ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/announcements/new" for 127.0.0.1 at 2017-03-08 19:49:48 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (3.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AnnouncementsController#new as HTML
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (50.8ms)
+  Rendered announcements/new.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 788ms (Views: 720.2ms | ActiveRecord: 6.9ms)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2017-03-08 19:50:09 -0300
+Processing by AnnouncementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ropDWsa0JYkn7VJxUGondvh5qrSIsj/KzB54oS167B16/7z2igC7lOY4iDAosy7ZZfS9f3aQ27I7qiUMhNlFAQ==", "announcement"=>{"headline"=>"test 2", "subhead"=>"caso 1", "body"=>"lorem ipsum"}, "commit"=>"Create Announcement"}
+  [1m[35m (7.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "announcements" ("publicationDate", "headline", "subhead", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["publicationDate", 2017-03-08 22:50:09 UTC], ["headline", "test 2"], ["subhead", "caso 1"], ["body", "lorem ipsum"], ["created_at", 2017-03-08 22:50:09 UTC], ["updated_at", 2017-03-08 22:50:09 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/announcements/22
+Completed 302 Found in 19ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/announcements/22" for 127.0.0.1 at 2017-03-08 19:50:10 -0300
+Processing by AnnouncementsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mAnnouncement Load (0.7ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering announcements/show.html.erb within layouts/application
+  Rendered announcements/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 197ms (Views: 188.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 19:50:13 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (2.1ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 214ms (Views: 210.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/announcements/new" for 127.0.0.1 at 2017-03-08 19:50:15 -0300
+Processing by AnnouncementsController#new as HTML
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (6.0ms)
+  Rendered announcements/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 163ms (Views: 158.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2017-03-08 19:50:27 -0300
+Processing by AnnouncementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fOOROuoIlpLfZSgqPlciknCt1PsMh0A5m39f5oKd28yolm6WprwIjx6w8mtGjis97SDDMPKlpEFsywJLKz5y0A==", "announcement"=>{"headline"=>"test 2", "subhead"=>"caso 2", "body"=>"lorem ipsum"}, "commit"=>"Create Announcement"}
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.7ms)[0m  [1m[32mINSERT INTO "announcements" ("publicationDate", "headline", "subhead", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["publicationDate", 2017-03-08 22:50:27 UTC], ["headline", "test 2"], ["subhead", "caso 2"], ["body", "lorem ipsum"], ["created_at", 2017-03-08 22:50:27 UTC], ["updated_at", 2017-03-08 22:50:27 UTC]]
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/announcements/23
+Completed 302 Found in 26ms (ActiveRecord: 21.8ms)
+
+
+Started GET "/announcements/23" for 127.0.0.1 at 2017-03-08 19:50:27 -0300
+Processing by AnnouncementsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mAnnouncement Load (2.1ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering announcements/show.html.erb within layouts/application
+  Rendered announcements/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 158ms (Views: 152.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 19:50:29 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 133ms (Views: 131.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/announcements/new" for 127.0.0.1 at 2017-03-08 19:50:32 -0300
+Processing by AnnouncementsController#new as HTML
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (2.5ms)
+  Rendered announcements/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 142ms (Views: 140.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2017-03-08 19:50:42 -0300
+Processing by AnnouncementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"818Q5g5h0S7hsRRvItdJsvY9SjS1NHWYmXfuhQqLWD0nKu9KQtVPMyBkzi5aDkAda7Bd/0sWkeBuw7MooyjxIQ==", "announcement"=>{"headline"=>"test 2", "subhead"=>"caso 3", "body"=>"lorem ipsum"}, "commit"=>"Create Announcement"}
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "announcements" ("publicationDate", "headline", "subhead", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["publicationDate", 2017-03-08 22:50:42 UTC], ["headline", "test 2"], ["subhead", "caso 3"], ["body", "lorem ipsum"], ["created_at", 2017-03-08 22:50:42 UTC], ["updated_at", 2017-03-08 22:50:42 UTC]]
+  [1m[35m (9.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/announcements/24
+Completed 302 Found in 19ms (ActiveRecord: 14.6ms)
+
+
+Started GET "/announcements/24" for 127.0.0.1 at 2017-03-08 19:50:42 -0300
+Processing by AnnouncementsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mAnnouncement Load (0.5ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering announcements/show.html.erb within layouts/application
+  Rendered announcements/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 138ms (Views: 132.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 19:50:44 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (3.7ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 152ms (Views: 144.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/announcements/new" for 127.0.0.1 at 2017-03-08 19:50:46 -0300
+Processing by AnnouncementsController#new as HTML
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (2.3ms)
+  Rendered announcements/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 131ms (Views: 130.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2017-03-08 19:50:56 -0300
+Processing by AnnouncementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L7UXcmgqzpDTnK1VjOix1Smv+viYvFXPDRrNv0la/NX7wOjeJJ5QjRJJdxT0Mbh6tCLtM2aesbf6rpAS4PlVyQ==", "announcement"=>{"headline"=>"test 2", "subhead"=>"caso 4", "body"=>"lorem ipsum"}, "commit"=>"Create Announcement"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "announcements" ("publicationDate", "headline", "subhead", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["publicationDate", 2017-03-08 22:50:56 UTC], ["headline", "test 2"], ["subhead", "caso 4"], ["body", "lorem ipsum"], ["created_at", 2017-03-08 22:50:56 UTC], ["updated_at", 2017-03-08 22:50:56 UTC]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/announcements/25
+Completed 302 Found in 17ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/announcements/25" for 127.0.0.1 at 2017-03-08 19:50:56 -0300
+Processing by AnnouncementsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mAnnouncement Load (1.3ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering announcements/show.html.erb within layouts/application
+  Rendered announcements/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 135ms (Views: 130.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 19:50:58 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (2.9ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 127ms (Views: 122.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/announcements/new" for 127.0.0.1 at 2017-03-08 19:51:00 -0300
+Processing by AnnouncementsController#new as HTML
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (9.7ms)
+  Rendered announcements/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 158ms (Views: 137.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2017-03-08 19:51:15 -0300
+Processing by AnnouncementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"arnoNDGTAzM1RrhhS//7BBBbRGa3054MLb/pilUxXJq+zBeYfSedLvSTYiAzJvKrjdZTrUnxenTaC7Qn/JL1hg==", "announcement"=>{"headline"=>"test 2", "subhead"=>"caso 5", "body"=>"lorem ipsum"}, "commit"=>"Create Announcement"}
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "announcements" ("publicationDate", "headline", "subhead", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["publicationDate", 2017-03-08 22:51:15 UTC], ["headline", "test 2"], ["subhead", "caso 5"], ["body", "lorem ipsum"], ["created_at", 2017-03-08 22:51:15 UTC], ["updated_at", 2017-03-08 22:51:15 UTC]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/announcements/26
+Completed 302 Found in 12ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/announcements/26" for 127.0.0.1 at 2017-03-08 19:51:15 -0300
+Processing by AnnouncementsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mAnnouncement Load (2.5ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering announcements/show.html.erb within layouts/application
+  Rendered announcements/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 140ms (Views: 134.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 19:51:18 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (3.8ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 139ms (Views: 134.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/announcements/new" for 127.0.0.1 at 2017-03-08 19:51:23 -0300
+Processing by AnnouncementsController#new as HTML
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (6.0ms)
+  Rendered announcements/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 162ms (Views: 160.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2017-03-08 19:51:32 -0300
+Processing by AnnouncementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E0006HRDMuGxS+EPpBW6k8CIHd9L8rpUgDTRznWyjdjHOMtEOPes/HCeO07czLM8XQUKFLXQXix3gIxj3BEkxA==", "announcement"=>{"headline"=>"test 2", "subhead"=>"caso 6", "body"=>"lorem ipsum"}, "commit"=>"Create Announcement"}
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "announcements" ("publicationDate", "headline", "subhead", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["publicationDate", 2017-03-08 22:51:32 UTC], ["headline", "test 2"], ["subhead", "caso 6"], ["body", "lorem ipsum"], ["created_at", 2017-03-08 22:51:32 UTC], ["updated_at", 2017-03-08 22:51:32 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/announcements/27
+Completed 302 Found in 20ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/announcements/27" for 127.0.0.1 at 2017-03-08 19:51:33 -0300
+Processing by AnnouncementsController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mAnnouncement Load (1.1ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  Rendering announcements/show.html.erb within layouts/application
+  Rendered announcements/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 117ms (Views: 113.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 19:51:35 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 119ms (Views: 117.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/announcements/new" for 127.0.0.1 at 2017-03-08 19:51:38 -0300
+Processing by AnnouncementsController#new as HTML
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (6.3ms)
+  Rendered announcements/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 142ms (Views: 140.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2017-03-08 19:51:47 -0300
+Processing by AnnouncementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3D+EKLaN66xyRlSuuSlq//KDTndok4+ex9Uprd2lAEsISnuE+jl1sbOTju/B8GNQbw5ZvJaxa+YwYXQAdAapVw==", "announcement"=>{"headline"=>"test 2", "subhead"=>"caso 6", "body"=>"lorem ipsum"}, "commit"=>"Create Announcement"}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "announcements" ("publicationDate", "headline", "subhead", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["publicationDate", 2017-03-08 22:51:47 UTC], ["headline", "test 2"], ["subhead", "caso 6"], ["body", "lorem ipsum"], ["created_at", 2017-03-08 22:51:47 UTC], ["updated_at", 2017-03-08 22:51:47 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/announcements/28
+Completed 302 Found in 12ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/announcements/28" for 127.0.0.1 at 2017-03-08 19:51:47 -0300
+Processing by AnnouncementsController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mAnnouncement Load (3.2ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering announcements/show.html.erb within layouts/application
+  Rendered announcements/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 155ms (Views: 149.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 19:51:50 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (0.9ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 127ms (Views: 124.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/announcements/28/edit" for 127.0.0.1 at 2017-03-08 19:51:54 -0300
+Processing by AnnouncementsController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mAnnouncement Load (4.3ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering announcements/edit.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (6.6ms)
+  Rendered announcements/edit.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 147ms (Views: 139.7ms | ActiveRecord: 4.3ms)
+
+
+Started PATCH "/announcements/28" for 127.0.0.1 at 2017-03-08 19:51:58 -0300
+Processing by AnnouncementsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kio2W80AjAYS8qv4sX1ME9Xfb5wOUyJedEYhc40FH6eW8IFF0zyv1e/62I4T2C3ggjl3K9rBgXqXiekSd0cR0w==", "announcement"=>{"headline"=>"test 2", "subhead"=>"caso 7", "body"=>"lorem ipsum"}, "commit"=>"Update Announcement", "id"=>"28"}
+  [1m[36mAnnouncement Load (2.8ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "announcements" SET "subhead" = $1, "updated_at" = $2 WHERE "announcements"."id" = $3[0m  [["subhead", "caso 7"], ["updated_at", 2017-03-08 22:51:58 UTC], ["id", 28]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/announcements/28
+Completed 302 Found in 23ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/announcements/28" for 127.0.0.1 at 2017-03-08 19:51:58 -0300
+Processing by AnnouncementsController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mAnnouncement Load (2.8ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering announcements/show.html.erb within layouts/application
+  Rendered announcements/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 154ms (Views: 149.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 19:52:01 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 167ms (Views: 165.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/announcements/new" for 127.0.0.1 at 2017-03-08 19:52:08 -0300
+Processing by AnnouncementsController#new as HTML
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (7.5ms)
+  Rendered announcements/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 133ms (Views: 130.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2017-03-08 19:52:20 -0300
+Processing by AnnouncementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pQQ3VzQQdBdvaBvY0rmUkX4gYSSiU6bAVNlrU1AMe79xccj7eKTqCq69wZmqYJ0+461271xxQrijbTb++a/Sow==", "announcement"=>{"headline"=>"test 2", "subhead"=>"caso 8", "body"=>"lorem ipsum"}, "commit"=>"Create Announcement"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "announcements" ("publicationDate", "headline", "subhead", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["publicationDate", 2017-03-08 22:52:20 UTC], ["headline", "test 2"], ["subhead", "caso 8"], ["body", "lorem ipsum"], ["created_at", 2017-03-08 22:52:20 UTC], ["updated_at", 2017-03-08 22:52:20 UTC]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/announcements/29
+Completed 302 Found in 12ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/announcements/29" for 127.0.0.1 at 2017-03-08 19:52:20 -0300
+Processing by AnnouncementsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mAnnouncement Load (1.0ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering announcements/show.html.erb within layouts/application
+  Rendered announcements/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 119ms (Views: 113.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 19:52:22 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 160ms (Views: 158.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/announcements/new" for 127.0.0.1 at 2017-03-08 19:52:25 -0300
+Processing by AnnouncementsController#new as HTML
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (6.0ms)
+  Rendered announcements/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 134ms (Views: 131.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2017-03-08 19:52:35 -0300
+Processing by AnnouncementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"74ZJcOGb6WvcBf3btskijR5cmawPZXUJsMJEyIdcAYY787bcrS93dh3QJ5rOECsig9GOZ/FHkXFHdhllLv+omg==", "announcement"=>{"headline"=>"test 2", "subhead"=>"caso 9", "body"=>"lorem ipsum"}, "commit"=>"Create Announcement"}
+  [1m[35m (9.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "announcements" ("publicationDate", "headline", "subhead", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["publicationDate", 2017-03-08 22:52:35 UTC], ["headline", "test 2"], ["subhead", "caso 9"], ["body", "lorem ipsum"], ["created_at", 2017-03-08 22:52:35 UTC], ["updated_at", 2017-03-08 22:52:35 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/announcements/30
+Completed 302 Found in 26ms (ActiveRecord: 11.6ms)
+
+
+Started GET "/announcements/30" for 127.0.0.1 at 2017-03-08 19:52:35 -0300
+Processing by AnnouncementsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mAnnouncement Load (2.2ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  Rendering announcements/show.html.erb within layouts/application
+  Rendered announcements/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 132ms (Views: 127.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 19:52:38 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (1.7ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 154ms (Views: 151.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/announcements/new" for 127.0.0.1 at 2017-03-08 19:52:42 -0300
+Processing by AnnouncementsController#new as HTML
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (2.6ms)
+  Rendered announcements/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 154ms (Views: 152.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2017-03-08 19:53:03 -0300
+Processing by AnnouncementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zyI/Aj8Y9ebh0h8MOfDa7GaYJKI0CIOsdVtLpUrN1ZkbV8Cuc6xr+yAHxU1BKdND+xUzacoqZ9SC7xYI4258hQ==", "announcement"=>{"headline"=>"test 2", "subhead"=>"caso 10", "body"=>"lorem ipsum"}, "commit"=>"Create Announcement"}
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "announcements" ("publicationDate", "headline", "subhead", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["publicationDate", 2017-03-08 22:53:03 UTC], ["headline", "test 2"], ["subhead", "caso 10"], ["body", "lorem ipsum"], ["created_at", 2017-03-08 22:53:03 UTC], ["updated_at", 2017-03-08 22:53:03 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/announcements/31
+Completed 302 Found in 12ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/announcements/31" for 127.0.0.1 at 2017-03-08 19:53:03 -0300
+Processing by AnnouncementsController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mAnnouncement Load (1.1ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering announcements/show.html.erb within layouts/application
+  Rendered announcements/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 133ms (Views: 128.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 19:53:06 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 147ms (Views: 144.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 20:05:39 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (4.6ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered announcements/index.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 195ms (Views: 180.1ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 20:06:08 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (4.9ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendered announcements/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 128ms (Views: 121.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/announcements/new" for 127.0.0.1 at 2017-03-08 20:06:12 -0300
+Processing by AnnouncementsController#new as HTML
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (5.3ms)
+  Rendered announcements/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 140ms (Views: 138.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2017-03-08 20:06:23 -0300
+Processing by AnnouncementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4+dyRZ5EAurFzW8eYdAhO2NMs17uvfzTcH6SOzSnPj83ko3p0vCc9wQYtV8ZCSiU/sGklRCfGKuHys+WnQSXIw==", "announcement"=>{"headline"=>"test 2", "subhead"=>"final one", "body"=>"lorem ipsum"}, "commit"=>"Create Announcement"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.0ms)[0m  [1m[32mINSERT INTO "announcements" ("publicationDate", "headline", "subhead", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["publicationDate", 2017-03-08 23:06:23 UTC], ["headline", "test 2"], ["subhead", "final one"], ["body", "lorem ipsum"], ["created_at", 2017-03-08 23:06:23 UTC], ["updated_at", 2017-03-08 23:06:23 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/announcements/32
+Completed 302 Found in 11ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/announcements/32" for 127.0.0.1 at 2017-03-08 20:06:23 -0300
+Processing by AnnouncementsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  Rendering announcements/show.html.erb within layouts/application
+  Rendered announcements/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 175ms (Views: 170.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 20:06:30 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (2.0ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 3]]
+  Rendered announcements/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 138ms (Views: 134.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 20:07:26 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (7.1ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 166ms (Views: 150.0ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-08 20:08:35 -0300
+Processing by AnnouncementsController#show_ten as HTML
+  [1m[36mAnnouncement Load (3.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" WHERE "announcements"."id" IN (NULL, NULL) ORDER BY "announcements"."publicationDate" DESC[0m
+Completed 404 Not Found in 6ms (ActiveRecord: 3.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find all Announcements with 'id': (all, {:order=>"publicationDate desc", :limit=>5}) (found 0 results, but was looking for 2)):
+  
+app/controllers/announcements_controller.rb:16:in `show_ten'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.5ms)
+Started GET "/" for 127.0.0.1 at 2017-03-08 20:09:21 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (8.5ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 183ms (Views: 162.3ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-08 20:11:32 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.9ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 194ms (Views: 160.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-08 20:13:25 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 171ms (Views: 144.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-08 20:16:39 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (2.6ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 224ms (Views: 218.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-08 20:17:11 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 212ms (Views: 206.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-08 20:17:59 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (1.5ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 136ms (Views: 132.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-08 20:26:09 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (1.3ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (354.8ms)
+Completed 500 Internal Server Error in 367ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_post_path' for #<#<Class:0x007fd4f27a2eb0>:0x007fd4f27966b0>
+Did you mean?  new_polymorphic_path):
+    31:          </table>
+    32:        </div>
+    33:      </div>
+    34: <%= link_to 'index_admin''<button type="button">Admins</button>'.html_safe, new_post_path %>
+    35: 
+    36: <br>
+    37: 
+  
+app/views/announcements/index.html.erb:34:in `_app_views_announcements_index_html_erb___601155017413718290_70276288919680'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.5ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.0ms)
+Started GET "/" for 127.0.0.1 at 2017-03-08 20:27:15 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (1.9ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (318.3ms)
+Completed 500 Internal Server Error in 331ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `announcement' for #<#<Class:0x007fd4f27a2eb0>:0x007fd4f21efce8>
+Did you mean?  @announcements):
+    31:          </table>
+    32:        </div>
+    33:      </div>
+    34: <%= link_to 'index_admin''<button type="button">Admin</button>'.html_safe, announcement %>
+    35: 
+    36: <br>
+    37: 
+  
+app/views/announcements/index.html.erb:34:in `_app_views_announcements_index_html_erb___601155017413718290_70276285984040'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.6ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.1ms)
+Started GET "/" for 127.0.0.1 at 2017-03-08 20:28:05 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (2.6ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (347.7ms)
+Completed 500 Internal Server Error in 365ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `announcement' for #<#<Class:0x007fd4f27a2eb0>:0x007fd4f265eb80>
+Did you mean?  @announcements):
+    31:          </table>
+    32:        </div>
+    33:      </div>
+    34: <%= link_to 'index_admin''<button type="button">Admin</button>'.html_safe, index_announcement_path(announcement) %>
+    35: 
+    36: <br>
+    37: 
+  
+app/views/announcements/index.html.erb:34:in `_app_views_announcements_index_html_erb___601155017413718290_70276288281260'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.4ms)
+Started GET "/" for 127.0.0.1 at 2017-03-08 20:28:42 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (1.7ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 173ms (Views: 168.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-08 20:29:08 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (2.6ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 150ms (Views: 145.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 20:29:13 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (2.7ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 155ms (Views: 150.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 20:29:15 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (2.5ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 139ms (Views: 134.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 20:29:16 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 154ms (Views: 149.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 20:29:17 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (2.9ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 163ms (Views: 157.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 20:29:36 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (1.5ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (384.0ms)
+Completed 500 Internal Server Error in 402ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `announcement' for #<#<Class:0x007fd4f27a2eb0>:0x0000000377df78>
+Did you mean?  @announcements):
+    31:          </table>
+    32:        </div>
+    33:      </div>
+    34: <%= link_to '<button type="button">Admin</button>'.html_safe, edit_announcement_path(announcement)%>
+    35: 
+    36: <br>
+    37: 
+  
+app/views/announcements/index.html.erb:34:in `_app_views_announcements_index_html_erb___601155017413718290_29099580'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (20.9ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.9ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (89.5ms)
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 20:29:51 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (2.4ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"announcements", :id=>nil} missing required keys: [:id]):
+    31:          </table>
+    32:        </div>
+    33:      </div>
+    34: <%= link_to '<button type="button">Admin</button>'.html_safe, edit_announcement_path(@announcement)%>
+    35: 
+    36: <br>
+    37: 
+  
+app/views/announcements/index.html.erb:34:in `_app_views_announcements_index_html_erb___601155017413718290_39981140'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (15.4ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.8ms)
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 20:30:24 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (233.0ms)
+Completed 500 Internal Server Error in 268ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `index_announcement_path' for #<#<Class:0x007fd4f27a2eb0>:0x007fd4f13fa7c8>
+Did you mean?  new_announcement_path
+               edit_announcement_path):
+    31:          </table>
+    32:        </div>
+    33:      </div>
+    34: <%= link_to '<button type="button">Admin</button>'.html_safe, index_announcement_path(@announcement)%>
+    35: 
+    36: <br>
+    37: 
+  
+app/views/announcements/index.html.erb:34:in `_app_views_announcements_index_html_erb___601155017413718290_70276273562220'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.3ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.6ms)
+Started GET "/" for 127.0.0.1 at 2017-03-08 20:35:48 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (2.8ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 2.8ms)
+
+
+  
+SyntaxError (/home/rlira2/Escritorio/NewsApp/app/views/announcements/index.html.erb:34: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...tion_path, method:index_admin :post );@output_buffer.safe_ap...
+...                               ^):
+  
+app/views/announcements/index.html.erb:34: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.4ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.2ms)
+Started GET "/" for 127.0.0.1 at 2017-03-08 23:30:56 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (1.1ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 125ms (Views: 121.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/announcements/32" for 127.0.0.1 at 2017-03-08 23:31:22 -0300
+Processing by AnnouncementsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mAnnouncement Load (1.6ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  Rendering announcements/show.html.erb within layouts/application
+  Rendered announcements/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 134ms (Views: 128.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 23:31:27 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (1.4ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 158ms (Views: 152.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 23:32:33 -0300
+Processing by AnnouncementsController#index as HTML
+  [1m[36mAnnouncement Load (0.3ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  Rendering announcements/index.html.erb within layouts/application
+  Rendered announcements/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 125ms (Views: 122.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 23:32:39 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (0.9ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 166ms (Views: 159.8ms | ActiveRecord: 0.9ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3778040616589386000);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3778040616589386000)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 23:41:52 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (5.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (3.5ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (47.5ms)
+Completed 200 OK in 796ms (Views: 742.1ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/announcements/new" for 127.0.0.1 at 2017-03-08 23:42:05 -0300
+Processing by AnnouncementsController#new as HTML
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (33.9ms)
+  Rendered announcements/new.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 232ms (Views: 228.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2017-03-08 23:42:14 -0300
+Processing by AnnouncementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wfr/Xr3GEtlvh+XNG2+Le1+MnPJqD5P5ET5bJMDc74mNjwDy8XKMxK5SP4xjtoLUwgGLOZQtd4HmigaJaX9GlQ==", "announcement"=>{"headline"=>"dcd", "subhead"=>"minimum - The minimum size of the attribute :maximum - The maximum size of the attribute :is - The exact size of the attribute :within - A range specifying the minimum and maximum size of the attribute :in - A synonym (or alias) for :within :allow_nil - Attribute may be nil; skip validation. :allow_blank - Attribute may be blank; skip validation. :too_long - The error message if the attribute goes over the maximum (default is: \"is too long (maximum is %d characters)\") :too_short - The error message if the attribute goes under the minimum (default is: \"is too short (min is %d characters)\") :wrong_length - The error message if using the :is method and the attribute is the wrong size (default is: \"is the wrong length (should be %d characters)\") :message - The error message to use for a :minimum, :maximum, or :is violation. An alias of the appropriate :too_long/too_short/wrong_length message :on - Specifies when this validation is active (default is :save, other options :create, :update) :if - Specifies a method, proc or string to call to determine if the validation should occur (e.g. :if =&gt; :allow_validation, or :if =&gt; Proc.new { |user| user.signup_step &gt; 2 }). The method, proc or string should return or evaluate to a true or false value. :unless - Specifies a method, proc or string to call to determine if the validation should not occur (e.g. :unless =&gt; :skip_validation, or :unless =&gt; Proc.new { |user| us", "body"=>"cscdcd"}, "commit"=>"Create Announcement"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.9ms)[0m  [1m[31mROLLBACK[0m
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (10.7ms)
+  Rendered announcements/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 216ms (Views: 189.1ms | ActiveRecord: 11.1ms)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2017-03-08 23:42:34 -0300
+Processing by AnnouncementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LDLi2Dzm/2bQbR2OwaPZ9m80YSvCt7lBXkcOpIpRqIAVMjte99nUopGSX8NjaxqGkYwWeOhQK+w3kpI4/2bNvw==", "announcement"=>{"headline"=>"dcd", "subhead"=>"jo", "body"=>""}, "commit"=>"Create Announcement"}
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.1ms)[0m  [1m[32mINSERT INTO "announcements" ("publicationDate", "headline", "subhead", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["publicationDate", 2017-03-09 02:42:34 UTC], ["headline", "dcd"], ["subhead", "jo"], ["body", ""], ["created_at", 2017-03-09 02:42:34 UTC], ["updated_at", 2017-03-09 02:42:34 UTC]]
+  [1m[35m (56.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/announcements/33
+Completed 302 Found in 69ms (ActiveRecord: 63.2ms)
+
+
+Started GET "/announcements/33" for 127.0.0.1 at 2017-03-08 23:42:34 -0300
+Processing by AnnouncementsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mAnnouncement Load (0.5ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering announcements/show.html.erb within layouts/application
+  Rendered announcements/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 202ms (Views: 187.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 23:42:44 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (2.8ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 163ms (Views: 142.7ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/announcements/33" for 127.0.0.1 at 2017-03-08 23:42:47 -0300
+Processing by AnnouncementsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PNCp2aKKrcDIUDBMHUiM9kakmfpPmE7F+pVbJRYNLEYF0HBfabWGBImvcgG/gE+GuBzuqWV/3GiTQMe5YzpJeQ==", "id"=>"33"}
+  [1m[36mAnnouncement Load (3.4ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "announcements" WHERE "announcements"."id" = $1[0m  [["id", 33]]
+  [1m[35m (44.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/announcements
+Completed 302 Found in 52ms (ActiveRecord: 48.3ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 23:42:47 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (0.5ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 144ms (Views: 141.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/announcements/new" for 127.0.0.1 at 2017-03-08 23:42:51 -0300
+Processing by AnnouncementsController#new as HTML
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (6.5ms)
+  Rendered announcements/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 131ms (Views: 126.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2017-03-08 23:42:56 -0300
+Processing by AnnouncementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PGH13mAV7RmMEiWnm+Ghi3/+Q0Yhxo5kc+9tnfOive7oFApyLKFzBE3H/+bjOKgk4nNUjd/kahyEWzAwWgEU8g==", "announcement"=>{"headline"=>"", "subhead"=>"", "body"=>""}, "commit"=>"Create Announcement"}
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (9.5ms)
+  Rendered announcements/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 165ms (Views: 155.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 23:46:03 -0300
+Processing by AnnouncementsController#index as HTML
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown key: :presence. Valid keys are: :on, :if, :unless, :prepend. Perhaps you meant to call `validates` instead of `validate`?):
+  
+app/models/announcement.rb:4:in `<class:Announcement>'
+app/models/announcement.rb:1:in `<top (required)>'
+app/controllers/announcements_controller.rb:7:in `index'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.5ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.6ms)
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 23:46:37 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 190ms (Views: 182.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/announcements/new" for 127.0.0.1 at 2017-03-08 23:46:41 -0300
+Processing by AnnouncementsController#new as HTML
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (6.8ms)
+  Rendered announcements/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 133ms (Views: 131.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/announcements" for 127.0.0.1 at 2017-03-08 23:46:43 -0300
+Processing by AnnouncementsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bCU2PHpCsvG4xSuUkdWSkQ2LJeFe7y5XkInf2iw8QlK4UMmQNvYs7HkQ8dXpDJs+kAYyKqDNyi9nPYJ3hZ/rTg==", "announcement"=>{"headline"=>"", "subhead"=>"", "body"=>""}, "commit"=>"Create Announcement"}
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (10.9ms)
+  Rendered announcements/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 160ms (Views: 148.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 23:46:53 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 147ms (Views: 145.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/announcements/32/edit" for 127.0.0.1 at 2017-03-08 23:48:19 -0300
+Processing by AnnouncementsController#edit as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mAnnouncement Load (2.4ms)[0m  [1m[34mSELECT  "announcements".* FROM "announcements" WHERE "announcements"."id" = $1 ORDER BY "announcements"."publicationDate" DESC LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  Rendering announcements/edit.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (7.0ms)
+  Rendered announcements/edit.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 149ms (Views: 143.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 23:48:22 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (2.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 130ms (Views: 126.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 23:51:03 -0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for AnnouncementsController):
+  
+actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 23:54:49 -0300
+Processing by AnnouncementsController#index as HTML
+Completed 406 Not Acceptable in 32ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (AnnouncementsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.0.2) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.2) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.7ms)
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 23:55:47 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (10.8ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (39.5ms)
+Completed 200 OK in 183ms (Views: 159.8ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-08 23:58:31 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 173ms (Views: 165.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-08 23:58:37 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 156ms (Views: 154.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-08 23:59:34 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 136ms (Views: 134.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 00:05:55 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (321.9ms)
+Completed 500 Internal Server Error in 329ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `index_path' for #<#<Class:0x007f8989b06e58>:0x007f898a0f4478>
+Did you mean?  video_path):
+     8: <p>
+     9:         <button type="button" class="btn btn-lg btn-primary">Primary</button>
+    10: </p>
+    11: <%= button_to "index", index_path %>
+  
+app/views/announcements/main_page.html.erb:11:in `_app_views_announcements_main_page_html_erb___437686635495505098_70114351756460'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.2ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.6ms)
+Started GET "/" for 127.0.0.1 at 2017-03-09 00:12:34 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 143ms (Views: 139.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:12:39 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (12.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.5ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (61.3ms)
+Started GET "/" for 127.0.0.1 at 2017-03-09 00:13:54 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 142ms (Views: 141.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:13:59 -0300
+  
+ActionController::RoutingError (uninitialized constant PagesController):
+  
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (10.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (75.1ms)
+Started GET "/" for 127.0.0.1 at 2017-03-09 00:16:13 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 165ms (Views: 163.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:16:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.7.1) lib/puma/configuration.rb:232:in `call'
+puma (3.7.1) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.1) lib/puma/server.rb:415:in `process_client'
+puma (3.7.1) lib/puma/server.rb:275:in `block in run'
+puma (3.7.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (9.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.5ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (71.8ms)
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:17:14 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (3.1ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 173ms (Views: 150.3ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 00:17:19 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 156ms (Views: 154.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:17:21 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (2.1ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 163ms (Views: 159.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 00:18:11 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 218ms (Views: 216.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 00:19:23 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 201ms (Views: 200.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 00:22:33 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 105ms (Views: 104.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 00:22:56 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 118ms (Views: 115.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 00:23:30 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 123ms (Views: 120.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:23:32 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (3.9ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 186ms (Views: 174.1ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 00:25:20 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 121ms (Views: 119.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:25:22 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 156ms (Views: 154.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 00:29:31 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 135ms (Views: 134.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 00:29:42 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 141ms (Views: 139.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 00:30:00 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 118ms (Views: 117.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:30:47 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (2.1ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 139ms (Views: 135.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:32:26 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (3.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 164ms (Views: 159.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:32:52 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (5.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 141ms (Views: 134.3ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:33:10 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (1.0ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 127ms (Views: 125.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:33:25 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (2.9ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 152ms (Views: 145.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:33:34 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (1.1ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 140ms (Views: 137.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:35:02 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (1.3ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 128ms (Views: 125.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:36:26 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (2.2ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 131ms (Views: 127.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:37:02 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (2.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 133ms (Views: 129.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/announcements/new" for 127.0.0.1 at 2017-03-09 00:37:07 -0300
+Processing by AnnouncementsController#new as HTML
+  Rendering announcements/new.html.erb within layouts/application
+  Rendered announcements/_form.html.erb (5.9ms)
+  Rendered announcements/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 132ms (Views: 130.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/announcements" for 127.0.0.1 at 2017-03-09 00:37:09 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (0.4ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 139ms (Views: 137.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 00:37:15 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 137ms (Views: 136.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-09 00:37:41 -0300
+Processing by AnnouncementsController#main_page as HTML
+  Rendering announcements/main_page.html.erb within layouts/application
+  Rendered announcements/main_page.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 126ms (Views: 122.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-03-09 00:37:53 -0300
+Processing by AnnouncementsController#index as HTML
+  Rendering announcements/index.html.erb within layouts/application
+  [1m[36mAnnouncement Load (2.5ms)[0m  [1m[34mSELECT "announcements".* FROM "announcements" ORDER BY "announcements"."publicationDate" DESC[0m
+  Rendered announcements/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 136ms (Views: 132.5ms | ActiveRecord: 2.5ms)
+
+
