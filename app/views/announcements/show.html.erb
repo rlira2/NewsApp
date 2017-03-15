@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-<div class="well">
 <p>
   <strong>Publicationdate:</strong>
   <%= @announcement.publicationDate %>
@@ -32,12 +31,9 @@
                </div>
     </div>
 <% end %>
-</div>
 
-    <div class="well">
       <h3> Add a Comment: </h3>
       <%= render 'comments/form' %>
-    </div>
 <br>
 
 <%= link_to 'Back', href='/main_page' %>
