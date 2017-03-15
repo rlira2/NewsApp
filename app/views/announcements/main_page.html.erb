@@ -15,6 +15,7 @@
               <p class="list-group-item-text"><%= announcement.body[0,1000] %></p>
             </a>
                </div>
+               <div align="left"> <%= announcement.comments.count %> Comments</div>
                <div align="right"><%= announcement.publicationDate %></div>
     </div>
 <% end %>

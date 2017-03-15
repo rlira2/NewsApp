@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="well">
 <p>
   <strong>Publicationdate:</strong>
   <%= @announcement.publicationDate %>
@@ -20,12 +20,24 @@
   <%= @announcement.body %>
 </p>
 
-<br>
-<h2> <%= @announcement.comments.count %> Comments </h2>
-    <%= render @announcement.comments %>
-    <h3> Add a Comments: </h3>
-    <%= render 'comments/form' %>
+<% @announcement.comments.each do |comments| %>
+    <div class="panel panel-info">
+               <div class="panel-heading">
+                 <h4><%= comments.name %></h4>
+               </div>
+               <div class="panel-body">
+              <p class="list-group-item-text"><%= comments.body %></p>
+              <p align="right"><%= link_to 'Delete', [comments.announcement, comments], method: :delete, data: {confirm:'Are you sure?'}%> </p>
+            </a>
+               </div>
+    </div>
+<% end %>
+</div>
+
+    <div class="well">
+      <h3> Add a Comment: </h3>
+      <%= render 'comments/form' %>
+    </div>
 <br>
 
-<%= link_to 'Edit', edit_announcement_path(@announcement) %> |
 <%= link_to 'Back', href='/main_page' %>
