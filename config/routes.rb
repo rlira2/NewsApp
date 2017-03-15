@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :announcements
+  resources :announcements do
+    resources :comments
+  end
   root 'announcements#main_page'
 
   get 'index' => 'announcements#index'

@@ -20,5 +20,12 @@
   <%= @announcement.body %>
 </p>
 
+<br>
+<h2> <%= @announcement.comments.count %> Comments </h2>
+    <%= render @announcement.comments %>
+    <h3> Add a Comments: </h3>
+    <%= render 'comments/form' %>
+<br>
+
 <%= link_to 'Edit', edit_announcement_path(@announcement) %> |
 <%= link_to 'Back', href='/main_page' %>

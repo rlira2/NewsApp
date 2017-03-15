@@ -1,4 +1,5 @@
 class Announcement < ApplicationRecord
+  has_many :comments, dependent: :destroy
   before_create :set_time_creation
   default_scope {order(publicationDate:'DESC')}
   validates :headline, :presence => true
